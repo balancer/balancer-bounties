@@ -21,7 +21,7 @@
         <div class="col-1">Issue</div>
         <div class="flex-auto">Title</div>
         <div class="col-2">Bounty</div>
-        <div class="col-1">Claimed by</div>
+        <div class="col-2">Claimed by</div>
       </div>
       <div
         v-for="(bounty, i) in filteredBounties"
@@ -32,7 +32,9 @@
           <h2>{{ bounty.issue }}</h2>
         </div>
         <div class="flex-auto">
-          <h2 class="mb-2">{{ bounty.title }}</h2>
+          <a :href="bounty.link" target="_blank">
+            <h2 class="mb-2">{{ bounty.title }}</h2>
+          </a>
           <div class="mb-2">
             <span v-for="tag in bounty.tags" :key="tag" class="label mr-2">
               {{ tag }}
@@ -40,13 +42,15 @@
           </div>
         </div>
         <div class="col-12 col-md-2">{{ bounty.bounty }}</div>
-        <div class="col-12 col-md-1">
+        <div class="col-12 col-md-2">
           <a
+              v-if="bounty['claimed by']"
             :href="`https://github.com/${bounty['claimed by']}`"
             target="_blank"
           >
             @{{ bounty['claimed by'] }}
           </a>
+          <template v-else>-</template>
         </div>
       </div>
     </div>
