@@ -53,7 +53,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 const id = '1VZpcv11xIxm_H9uVNG1oEpYbroR-5SBkvXXMvJCUedA';
 const url = `https://spreadsheets.google.com/feeds/cells/${id}/1/public/full?alt=json`;
 
