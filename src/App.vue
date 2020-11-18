@@ -9,8 +9,8 @@
         style="max-width: 520px; font-size: 24px;"
         class="mx-auto py-5 text-center"
       >
-        Help grow Balancer ecosystem by building essential projects requested by
-        the community and earn grant funding for your contribution.
+        Help grow the Balancer ecosystem by building essential projects
+        requested by the community and earn grant funding for your contribution.
       </p>
       <div class="mb-5 d-flex flex-items-center rounded-3 px-4 bg-gray">
         <i class="iconfont iconsearch mb-1 mr-2" style="font-size: 22px;" />
