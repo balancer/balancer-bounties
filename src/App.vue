@@ -1,10 +1,17 @@
 <template>
   <div id="app">
+    <div class="text-center pt-5">
+      <img src="@/assets/logo.svg" height="42" />
+      <h2 class="text-normal text-center"><b>Balancer</b> | Bounties</h2>
+    </div>
     <div class="container-lg px-4 mb-6">
-      <div class="text-center py-5">
-        <img src="@/assets/logo.svg" height="64" />
-        <h2>Balancer bounties</h2>
-      </div>
+      <p
+        style="max-width: 520px; font-size: 24px;"
+        class="mx-auto py-5 text-center"
+      >
+        Help grow Balancer ecosystem by building essential projects requested by
+        the community and earn grant funding for your contribution.
+      </p>
       <div class="mb-5 d-flex flex-items-center rounded-3 px-4 bg-gray">
         <i class="iconfont iconsearch mb-1 mr-2" style="font-size: 22px;" />
         <input
@@ -44,7 +51,7 @@
         <div class="col-12 col-md-2">{{ bounty.bounty }}</div>
         <div class="col-12 col-md-2">
           <a
-              v-if="bounty['claimed by']"
+            v-if="bounty['claimed by']"
             :href="`https://github.com/${bounty['claimed by']}`"
             target="_blank"
           >
