@@ -1,16 +1,13 @@
 <template>
   <div id="app">
-    <div class="text-center pt-5">
+    <div class="text-center pt-5 mb-3">
       <img src="@/assets/logo.svg" height="42" />
-      <h2 class="text-normal text-center"><b>Balancer</b> | Bounties</h2>
+      <h1 class="text-normal text-center"><b>Balancer</b> | Bounties</h1>
     </div>
     <div class="container-lg px-4 mb-6">
-      <p
-        style="max-width: 520px; font-size: 24px;"
-        class="mx-auto py-5 text-center"
-      >
+      <p style="max-width: 520px;" class="mx-auto text-center mb-6">
         Help grow the Balancer ecosystem by building essential projects
-        requested by the community and earn grant funding for your contribution.
+        requested by the community. Earn grant funding for your contribution.
       </p>
       <div class="mb-5 d-flex flex-items-center rounded-3 px-4 bg-gray">
         <i class="iconfont iconsearch mb-1 mr-2" style="font-size: 22px;" />
@@ -57,7 +54,16 @@
           >
             @{{ bounty['claimed by'] }}
           </a>
-          <template v-else>-</template>
+          <a
+            v-else-if="bounty['apply']"
+            :href="bounty['apply']"
+            target="_blank"
+          >
+            <button class="btn">Apply</button>
+          </a>
+          <template v-else>
+            -
+          </template>
         </div>
       </div>
     </div>
@@ -123,6 +129,10 @@ export default {
 @import '~@primer/css/index.scss';
 @import '//at.alicdn.com/t/font_1946815_x1zw6bzu1ee.css';
 
+*:focus {
+  outline: none !important;
+}
+
 @font-face {
   font-family: 'Calibre';
   src: url('./assets/fonts/Calibre-Medium.eot');
@@ -161,5 +171,16 @@ export default {
 input {
   outline: none;
   background: transparent;
+}
+
+.btn {
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+  }
+
+  font-size: 16px;
+  line-height: 32px;
+  border-radius: 32px;
 }
 </style>
