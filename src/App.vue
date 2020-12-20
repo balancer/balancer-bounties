@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <div class="text-center pt-5 mb-3">
+    <div class="text-center pt-5">
       <img src="@/assets/logo.svg" height="42" />
-      <h1 class="text-normal text-center"><b>Balancer</b> | Bounties</h1>
+      <h2 class="text-normal text-center"><b>Perpetual Protocol</b> | Bounties</h2>
     </div>
     <div class="container-lg px-4 mb-6">
-      <p style="max-width: 520px;" class="mx-auto text-center mb-6">
-        Help grow the Balancer ecosystem by building essential projects
-        requested by the community. Earn grant funding for your contribution.
+      <p
+        style="max-width: 520px; font-size: 24px;"
+        class="mx-auto py-5 text-center"
+      >
+        Help grow the Perpetual protocol ecosystem by building essential projects
+        requested by the community and earn grant funding for your contribution.
       </p>
       <div class="mb-5 d-flex flex-items-center rounded-3 px-4 bg-gray">
         <i class="iconfont iconsearch mb-1 mr-2" style="font-size: 22px;" />
@@ -61,9 +64,7 @@
           >
             <button class="btn">Apply</button>
           </a>
-          <template v-else>
-            -
-          </template>
+          <template v-else>-</template>
         </div>
       </div>
     </div>
@@ -71,7 +72,7 @@
 </template>
 
 <script>
-const id = '1VZpcv11xIxm_H9uVNG1oEpYbroR-5SBkvXXMvJCUedA';
+const id = '1KrauA78waBdxOkhgHk0Oo6ZHWG9vGtsQ6qTbSCt4dx8';
 const url = `https://spreadsheets.google.com/feeds/cells/${id}/1/public/full?alt=json`;
 
 const getSpreadsheet = async url => {
@@ -129,12 +130,8 @@ export default {
 @import '~@primer/css/index.scss';
 @import '//at.alicdn.com/t/font_1946815_x1zw6bzu1ee.css';
 
-*:focus {
-  outline: none !important;
-}
-
 @font-face {
-  font-family: 'Calibre';
+  font-family: 'Roboto';
   src: url('./assets/fonts/Calibre-Medium.eot');
   src: url('./assets/fonts/Calibre-Medium.eot?#iefix')
       format('embedded-opentype'),
@@ -171,16 +168,5 @@ export default {
 input {
   outline: none;
   background: transparent;
-}
-
-.btn {
-  &:focus {
-    outline: 0 !important;
-    box-shadow: none;
-  }
-
-  font-size: 16px;
-  line-height: 32px;
-  border-radius: 32px;
 }
 </style>

@@ -1,4 +1,4 @@
-# Balancer bounties
+# Perpetual Protocol bounties
 
 ## Project setup
 ```
