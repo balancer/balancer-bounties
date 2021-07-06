@@ -71,7 +71,7 @@
 </template>
 
 <script>
-const id = '1VZpcv11xIxm_H9uVNG1oEpYbroR-5SBkvXXMvJCUedA';
+const id = '1lXVHCk-cd_jjVP1FMcd_njtDwiywxy2yZ1PyHGhgy3U';
 const url = `https://spreadsheets.google.com/feeds/cells/${id}/1/public/full?alt=json`;
 
 const getSpreadsheet = async url => {
